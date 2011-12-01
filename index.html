@@ -7,11 +7,6 @@
 <h2>Android App Inventor Wiki</h2>
 
 
-
-
-
-
-
 <h1>Getting Started</h1>
 	<p>The best way to get started is to go to <a href="http://www.appinventorbeta.com/about/"> AppInventors About Page</a> and read over their documentation. Once you have looked this page over, maybe even have seen the video "App Inventor in Action", click the Get Started Button.
 	</p>
@@ -45,17 +40,17 @@
 	</p>
 	<p>After all the components have been dropped onto the screen, and also all the properties have been properly set to distinguishable values. Click the button in the upper right hand corner to <img src="screenshots/OpenBlocksEditor.png" 	alt="OpenBlocksEditor Button"/>. This should open the App Inventor Blocks Editing program on your computer. If you want to learn more how to use the Blocks Editor, see the Using The Blocks Editor section of this wiki.
 	</p>
-	<p>In the Blocks Editor, click the My Blocks tab on the left hand toolbar. Here you should see all the components we added via the Interface Creator. When you click on a component, you should see all the possible actions for that specific component. For our purposes, click and drag a Button1. Click piece and drag it into the workspace (anywhere on screen). Then click the Built-In tab, click control, and drag an ifelse piece into the workspace. Make sure that you  connect it in the correct notches of the Button1.Click piece. It should snap to place when the block editor recognizes what you are doing.
+	<p>In the Blocks Editor, click the My Blocks tab on the left hand toolbar. Here you should see all the components we added via the Interface Creator. When you click on a component, you should see all the possible actions for that specific component. For our purposes, click and drag a "Button1.Click" piece and drag it into the workspace (anywhere on screen). Then click the Built-In tab, click control, and drag an if-else piece into the workspace. Make sure that you connect it in the correct notches of the Button1.Click piece. It should snap to place when the block editor recognizes what you are doing. Just to summarize, this Button1.Click block will handle what happens when the button is pressed. When our button is pressed, we are going to need to make a decision on what to do. The if-else piece is there for that.
 	</p>
-	<p>Now we'll add pieces to the test socket. First click the Built In tab, click logic, and drag the piece that has the equals sign seperating two open spaces. In the first open space add in a TextBox1.Text piece (My Blocks -> TextBox1). In the second open space, add a blank text piece (Built-In -> Text). Click on this added text to edit the value of the text. Type 'red' (without quotes). Under the "then-do" open space in the ifelse piece drop a set Canvas1.BackgroundColor piece(My Blocks -> Canvas). Then drop a color red piece in the "to" socket. So that the statement should read :
+	<p>Now we'll add pieces to the test socket seen on the if-else piece. First click the Built In tab, click logic, and drag the piece that has the equals sign seperating two open spaces. In the first open space add in a TextBox1.Text piece (My Blocks -> TextBox1). In the second open space, add a blank text piece (Built-In -> Text). Click on this added text to edit the value of the text. Type 'red' (without quotes). Under the "then-do" open space in the if-else piece drop a set Canvas1.BackgroundColor piece(My Blocks -> Canvas). Then drop a color red piece in the "to" socket. So that the statement should read :
 	<br/><img src="screenshots/ifelse/IfRed.png" 	alt="IfRed"/>
 	</p>
 	<p>That is the first part of the if statement. When the button is pressed, this program checks the text entered into TextBox1. If the text is equal to 'red' it will set the background color of Canvas1 to red. We will continue to program what happens when the text does not equal red. In the else-do open socket add another if-else statement. Notice that we can nest these if else pieces to make lots and lots of choices. Here we are going to copy the same steps as above for the test. The only difference is to change the text from 'red' to 'blue' (again without the quotes). In the then-do socket change the background color of the canvas to blue instead of red. This will look exactly like it did above.
 	</p>
 	<p>Then in our second else-do socket just change the background color of the canvas to grey, or any other color that you'd like. Don't make this color red or blue though, that would just be stupid. Don't be stupid. That will be it! Once you have completed that your block code and interface viewer should look similar to what is below:
 	</p>
-	<img src="screenshots/ifelse/Blockcode.png" 	alt="IfRed"/>
 	<img src="screenshots/ifelse/Viewer.png" 	alt="IfRed"/>
+	<img src="screenshots/ifelse/Blockcode.png" 	alt="IfRed"/>
 	
 	<p>Running this application should give you the following behavior. On startup you will see a white screen with a text field at the top of the screen and a button at the bottom. If you click change color as is, the canvas background color will change to grey. Entering the text 'red' (without quotes) into the text box and then clicking the button will change the color of the canvas background to red. Entering 'blue' into the text box and clicking the button will change the canvas background color to blue.
 	</p>
@@ -68,6 +63,33 @@
 		<li>Colors</li>
 
 	</ul>
+
+
+<h1>Some Things Are Randmom</h1>
+	<p>In life, sometimes its a little surprise that makes a big difference. Its the random things that we appreciate. In Computer Science, a random value can sometimes make a program run a little more enjoyable. King Kong (barrel game) would not be the same if those barrels came down at the exact same time, every time the game was played. Some predictions are better left upredicted. In this app, we'll create a very simple random nnumber generator. Then we'll use that random number and associate with a list so that we can display colors onto a screen in a fun way.
+	</p>
+	<img src="screenshots/randomnumber/Viewer.png" 	alt="Random Number Viewer" class="shouldwraptext"/>
+	
+	<p>Starting with Interface Creation. Drag a Button and and Canvas onto the Viewer. In the properties section, I chose a Background Color of the Canvas to be Cyan. You can pick any color, you don't need to pick any color. This was simply to give the canvas a starting value. Do make sure that you resize the Canvas so that it is a good size to view. Don't be shy, the more the canvas fills the screen the better the effect will be! On the Button, change the text property to something like "Click Me!" or whatever. It doesn't matter, but the default is default. And also boring.
+	</p>
+	
+	<p>Next <img src="screenshots/OpenBlocksEditor.png" 	alt="OpenBlocksEditor Button"/>, and we can get started on the fun stuff. First things first, we are going to define a list of colors that we can use later. Built-in -> Definition -> def variable is the piece we'll be using. Grab it and drag it onto the screen. This is how the block editor stores information for us to use later. Click the text showing "variable" and you will be able to edit it. Call this variable "colorList". Then drag in the first piece in the Lists section. It should be called make a list with a socket labeled item. Add a bunch of colors to this socket. When you add one there should be another empty one that appears. I added every single default color that I could, if you want to create your own colors feel free. Make sure you get more that five atleast, the more colors the better the effect will be. You block should look similar to what I have below:
+	</p>
+	<img src="screenshots/randomnumber/ColorList.png" 	alt="ColorList Block"/>
+	<p>Once the list is created, we'll need to create a Button.Click event handler to drive the functionality of our program (My Blocks -> Button1.Click). In this socket we are going to set the Canvas background color (My Blocks -> set Canvas1.BackgroundColor). What are we going to set the background color too? This is probably the best place to make use of the list of colors we had created before. So lets grab a color. We want the select list item piece (Built-In -> Lists -> Select List Item). This item has two sockets. One for which list we are selecting from and one for which index in that list our item will come from. In the list socket, add our list colorList (My Blocks -> My Definitions -> colorList). In the index socket, lets find a random number between 1 and the length of the list. To do this, first add the piece that will generate a random number (Built-In -> Math -> Random Integer). We want our random integer to be between two numbers, the first is a static  number 1. The second should be the length of your list. This can be statically entered yourself by counting how many colors you added to your list (I added 13). Or if you're smart, you can find the length of the list. I'll give you a hint for that one, you'll need to add one more piece, and it can be found in the Lists toolbar.
+	</p>
+	<img src="screenshots/randomnumber/ButtonClick.png"	alt="Button Click Random Color Generator"/>
+	<p>Run it! Your app should generate a new random color and set it to the background of the canvas everytime the button is pressed. Keep pressing faster and faster! If you have epsilepsy, consider this your warning, I'm sorry it came at the end.
+	</p>
+		
+	<h3>Topics Covered</h3>
+		<ul>
+			<li>Button Click Events</li>
+			<li>Lists</li>
+			<li>Random Integer Generation</li>
+			<li>Colors</li>
+		</ul>
+	
 	
 <h1>Loop D Loops</h1>
 	<p>
@@ -82,6 +104,13 @@
 
 
 <h1>Advanced Topics</h1>
+
+
+<h1>Things App Inventor Can't Do</h1>
+<ul>
+	<li>Create objects dynamically at runtime.</li>
+
+</ul>
 
 
 
