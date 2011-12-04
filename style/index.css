@@ -1,0 +1,32 @@
+/*	Stylesheet for index.html of the AppInventorWiki Project
+//
+//		*/
+
+body{
+	background-color:#48AA99;		/*background color for construction purposes.*/
+	
+}
+
+.screenshot{
+	background-color:#48CCAA;		
+	border-style: solid;
+	border-color: red;
+	z:2;
+	width:1024px;
+	height:600px;
+	margin:auto;
+}
+#Palette{
+	
+}
+
+#Viewer{
+
+}
+
+#Components{
+	
+}
+#Properties{
+	float:right;
+}

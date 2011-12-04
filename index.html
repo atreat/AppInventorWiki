@@ -1,6 +1,6 @@
 <HMTL>
 <HEAD>
-
+	<link rel="stylesheet" type="text/css" href="style/index.css" />
 </HEAD>
 <BODY>
 
@@ -20,11 +20,11 @@
 	</p>
 	<p>First, navigate to the My Projects page and click New Project. Name this project anything, be descriptive, something along the lines of "Hello_World" works magically. From here  You should see the Interface Creation window. This consists of the Palette, for adding components, the Viewer, to give a simple layout screen for the app, the Components, to show you which components you have added to you application, and the Properties, which lets you edit the properties of the selected component. Here you also should see a Media pane which allows you to upload custom media to the App Inventor to be added into your app. See the screenshots below:
 	</p>
-	<div class="screenshot" id="InterfaceCreation">
-	<img src="screenshots/Pallet.png" 		alt="Pallet Pane"/>
-	<img src="screenshots/Viewer.png" 		alt="Viewer Pane"/>
-	<img src="screenshots/Components.png" 	alt="Component Pane"/>
-	<img src="screenshots/Properties.png" 	alt="Properties Pane"/>
+	<div class="screenshot" >
+	<img src="screenshots/Pallet.png" 		alt="Pallet Pane" id="Pallete"/>
+	<img src="screenshots/Viewer.png" 		alt="Viewer Pane" id="Viewer"/>
+	<img src="screenshots/Components.png" 	alt="Component Pane" id="Components"/>
+	<img src="screenshots/Properties.png" 	alt="Properties Pane" id="Properties"/>
 	</div>
 	<p>From here drag and drop a Label from the Palette onto the screen in the Viewer. Once dropped onto the screen it will appear with the text "Text for Label 1" in the Viewer and in the Components pane you will see a component named "Label1". This is all we'll need to add for this first project. From here, click on the Label1 component and look in its Properties. Change the Text to "Hello World!". You can change the font size from  in this pane, also the text alignment. Personally, I prefer to center the label in the screen by setting the width to Fill Parent and have the text alignment centered. You can play with these properties and see how they will change your label.
 	</p>
@@ -49,8 +49,10 @@
 	</p>
 	<p>Then in our second else-do socket just change the background color of the canvas to grey, or any other color that you'd like. Don't make this color red or blue though, that would just be stupid. Don't be stupid. That will be it! Once you have completed that your block code and interface viewer should look similar to what is below:
 	</p>
+	<div class="screenshot">
 	<img src="screenshots/ifelse/Viewer.png" 	alt="IfRed"/>
 	<img src="screenshots/ifelse/Blockcode.png" 	alt="IfRed"/>
+	</div>
 	
 	<p>Running this application should give you the following behavior. On startup you will see a white screen with a text field at the top of the screen and a button at the bottom. If you click change color as is, the canvas background color will change to grey. Entering the text 'red' (without quotes) into the text box and then clicking the button will change the color of the canvas background to red. Entering 'blue' into the text box and clicking the button will change the canvas background color to blue.
 	</p>
